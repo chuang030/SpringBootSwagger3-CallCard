@@ -1,0 +1,34 @@
+{
+    // ...
+    "message": "Validation failed for object='userUpdateDTO'. Error count: 1",
+    "errors": [
+        {
+        "objectName": "userUpdateDTO",
+        "field": "idNumber",
+        "rejectedValue": "",
+        "codes": [
+            "Length.userUpdateDTO.idNumber",
+            "Length.idNumber",
+            "Length.java.lang.String",
+            "Length"
+        ],
+        "arguments": [
+            {
+            "codes": [
+                "userUpdateDTO.idNumber",
+                "idNumber"
+            ],
+            "arguments": null,
+            "defaultMessage": "idNumber",
+            "code": "idNumber"
+            },
+            10,
+            1
+        ],
+        "defaultMessage": "The length of ID Number is 1 ~ 10.",
+        "bindingFailure": false,
+        "code": "Length"
+        }
+    ]
+    // ...
+}

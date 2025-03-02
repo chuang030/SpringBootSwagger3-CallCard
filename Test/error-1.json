@@ -1,0 +1,150 @@
+{
+    // ...
+  "message": "Validation failed for object='userDTO'. Error count: 5",
+    "errors": [
+      {
+        "objectName": "userDTO",
+        "field": "isZodiacNotification",
+        "rejectedValue": "1",
+        "codes": [
+          "Pattern.userDTO.isZodiacNotification",
+          "Pattern.isZodiacNotification",
+          "Pattern.java.lang.String",
+          "Pattern"
+        ],
+        "arguments": [
+          {
+            "codes": [
+              "userDTO.isZodiacNotification",
+              "isZodiacNotification"
+            ],
+            "arguments": null,
+            "defaultMessage": "isZodiacNotification",
+            "code": "isZodiacNotification"
+          },
+          [],
+          {
+            "arguments": null,
+            "defaultMessage": "^$|[NY]",
+            "codes": [
+              "^$|[NY]"
+            ]
+          }
+        ],
+        "defaultMessage": "Accept only [Y/N].",
+        "bindingFailure": false,
+        "code": "Pattern"
+      },
+      {
+        "objectName": "userDTO",
+        "field": "idNumber",
+        "rejectedValue": "",
+        "codes": [
+          "NotEmpty.userDTO.idNumber",
+          "NotEmpty.idNumber",
+          "NotEmpty.java.lang.String",
+          "NotEmpty"
+        ],
+        "arguments": [
+          {
+            "codes": [
+              "userDTO.idNumber",
+              "idNumber"
+            ],
+            "arguments": null,
+            "defaultMessage": "idNumber",
+            "code": "idNumber"
+          }
+        ],
+        "defaultMessage": "ID Number cannot be empty.",
+        "bindingFailure": false,
+        "code": "NotEmpty"
+      },
+      {
+        "objectName": "userDTO",
+        "field": "postalCode",
+        "rejectedValue": "111111111111111111",
+        "codes": [
+          "Length.userDTO.postalCode",
+          "Length.postalCode",
+          "Length.java.lang.String",
+          "Length"
+        ],
+        "arguments": [
+          {
+            "codes": [
+              "userDTO.postalCode",
+              "postalCode"
+            ],
+            "arguments": null,
+            "defaultMessage": "postalCode",
+            "code": "postalCode"
+          },
+          6,
+          0
+        ],
+        "defaultMessage": "The maximum length of postalCode is 6.",
+        "bindingFailure": false,
+        "code": "Length"
+      },
+      {
+        "objectName": "userDTO",
+        "field": "username",
+        "rejectedValue": "",
+        "codes": [
+          "NotEmpty.userDTO.username",
+          "NotEmpty.username",
+          "NotEmpty.java.lang.String",
+          "NotEmpty"
+        ],
+        "arguments": [
+          {
+            "codes": [
+              "userDTO.username",
+              "username"
+            ],
+            "arguments": null,
+            "defaultMessage": "username",
+            "code": "username"
+          }
+        ],
+        "defaultMessage": "Username cannot be empty.",
+        "bindingFailure": false,
+        "code": "NotEmpty"
+      },
+      {
+        "objectName": "userDTO",
+        "field": "email",
+        "rejectedValue": "testtest.com",
+        "codes": [
+          "Email.userDTO.email",
+          "Email.email",
+          "Email.java.lang.String",
+          "Email"
+        ],
+        "arguments": [
+          {
+            "codes": [
+              "userDTO.email",
+              "email"
+            ],
+            "arguments": null,
+            "defaultMessage": "email",
+            "code": "email"
+          },
+          [],
+          {
+            "arguments": null,
+            "defaultMessage": ".*",
+            "codes": [
+              ".*"
+            ]
+          }
+        ],
+        "defaultMessage": "Email format is incorrect.",
+        "bindingFailure": false,
+        "code": "Email"
+      }
+    ]
+    // ...
+}
