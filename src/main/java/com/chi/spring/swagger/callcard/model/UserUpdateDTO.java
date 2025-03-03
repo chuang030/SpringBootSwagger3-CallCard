@@ -25,6 +25,7 @@ public class UserUpdateDTO {
 	private Long id;
 	
 	@PastOrPresent
+	@NotNull(message = "Application date cannot be empty.")
 	@Schema(description = "申請日期",example = "2025-03-02T06:01:56.001Z")
 	private Date applicationDate = null;
 	
