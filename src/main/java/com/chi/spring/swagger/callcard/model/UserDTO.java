@@ -8,6 +8,7 @@ import org.hibernate.validator.constraints.Length;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
@@ -24,7 +25,8 @@ public class UserDTO {
 	@Schema(accessMode = Schema.AccessMode.READ_ONLY, description = "User資料庫ID")
 	private Long id;
 	
-	@PastOrPresent(message = "Application date cannot be empty.")
+	@PastOrPresent
+	@NotNull(message = "Application date cannot be empty.")
 	@Schema(description = "申請日期",example = "2025-03-02T06:01:56.001Z")
 	private Date applicationDate = null;
 	
@@ -50,7 +52,8 @@ public class UserDTO {
 	@Schema(description = "姓名",example = "Username")
 	private String username = "";
 	
-	@PastOrPresent(message = "Date of Birth cannot be empty.")
+	@PastOrPresent
+	@NotNull(message = "Date of Birth cannot be empty.")
 	@Schema(description = "出生日期",example = "2025-03-02T06:01:56.001Z")
 	private Date dateOfBirth = null;
 	

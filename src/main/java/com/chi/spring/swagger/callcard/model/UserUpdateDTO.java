@@ -8,6 +8,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
@@ -23,7 +24,7 @@ public class UserUpdateDTO {
 	@Schema(accessMode = Schema.AccessMode.READ_ONLY, description = "User資料庫ID")
 	private Long id;
 	
-	@PastOrPresent(message = "Application date cannot be empty.")
+	@PastOrPresent
 	@Schema(description = "申請日期",example = "2025-03-02T06:01:56.001Z")
 	private Date applicationDate = null;
 	
@@ -35,6 +36,7 @@ public class UserUpdateDTO {
 	@Schema(description = "姓名",example = "Username")
 	private String username = null;
 	
+	@PastOrPresent
 	@Schema(description = "出生日期",example = "2025-03-02T06:01:56.001Z")
 	private Date dateOfBirth = null;
 	
